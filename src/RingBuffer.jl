@@ -30,7 +30,7 @@ module RingBuffer
 
   function next_index(current, size)
     next = current + 1
-    if next%size == 0
+    if current%size == 0
       next = 1
     end
     return next
