@@ -14,7 +14,7 @@ module RingBuffer
 
   function write!(buffer, value)
     buffer.memory[buffer.write_idx] = value;
-    buffer.write_idx += 1;
+    buffer.write_idx = next_index(buffer.write_idx, buffer.size);
   end
 
   function read(buffer)
