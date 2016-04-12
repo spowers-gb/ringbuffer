@@ -23,6 +23,9 @@ module RingBuffer
     return value
   end
 
+  function read_newest(buffer)
+    return buffer.memory[buffer.write_idx]
+
 
   function read_all(buffer)
     buffer.memory
